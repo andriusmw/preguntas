@@ -4,39 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Preguntas App por Carlos y Andrius</title>
+    <title>Questions App by MontesinosR & andriusmw</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="script" href="script.js" />
   </head>
   <body>
     <header>
-      <div><h3>Puntuación</h3></div>
-      <div><h1>Preguntas App por Carlos y Andrius</h1></div>
-      <div><h3>Juego Nuevo</h3></div>
+      <div>
+        <h3>Score</h3>
+      </div>
+      <div>
+        <h1>
+          Questions App by
+          <a href="https://github.com/MontesinosR" target="_blank"
+            >MontesinosR</a
+          >
+          & <a href="https://github.com/andriusmw" target="_blank">andriusmw</a>
+        </h1>
+      </div>
+      <div>
+        <h3>New Game</h3>
+      </div>
     </header>
-
-    <section id="contenedor">
+    <section id="container">
       <!--Pregunta-->
-      <article class="pregunta" id="pregunta"><h2>pregunta</h2></article>
+      <article class="question" id="question">
+        <h2>Question Here</h2>
+      </article>
       <img alt="question-photo" src="https://picsum.photos/200/300" />
       <!--el 200 y 300 son las dimensiones, luego cuando tengamos css borramos el  200 y 300 y ya redimensionamos
       con el tamaño del contenenodr o como toque.-->
     </section>
     <!--RESPUESTAS-->
-    <aside id="respuesta">
-      <ul class="respuesta">
-        <li class="respuesta" id="correcta">Correcta</li>
-        <li class="respuesta" id="respuesta1">Respuesta1</li>
-        <li class="respuesta" id="respuesta2">Respuesta2</li>
-        <li class="respuesta" id="respuesta3">Respuesta3</li>
+    <aside id="answer">
+      <ul class="answer">
+        <li class="answer" id="correct">Correct</li>
+        <li class="answer" id="answer1">answer1</li>
+        <li class="answer" id="answer2">answer2</li>
+        <li class="answer" id="answer3">answer3</li>
       </ul>
     </aside>
     <!--NOTAS:
         Le he puesto class e id a todo para que luego se le pueda cambiar los estilos, en función
         de :hover o si tiene además el id correcta. Así como para darle apariencia de botón.
-        El texto de as preguntas y respuestas, lo podemos cambiar luego en el javascript 
+        El texto de as preguntas y respuestas, lo podemos cambiar luego en el javascript
         mediante modificación del DOM, con .textconet para pasarle lo que recibamos del JSON.
         Hay 5 respuestas en total en el JSON pero para que se adecúe al figma, podemos llamar a la correcta
         y 3 respuestas haciendo un total de 4.
-    
     -->
   </body>
 </html>
