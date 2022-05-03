@@ -8,28 +8,34 @@
   </head>
   <body>
     <header>
-      <h1>Preguntas App por Carlos y Andrius</h1>
+      <div><h3>Puntuación</h3></div>
+      <div><h1>Preguntas App por Carlos y Andrius</h1></div>
+      <div><h3>Juego Nuevo</h3></div>
     </header>
 
     <section id="contenedor">
       <!--Pregunta-->
-      <article class="pregunta" id="pregunta">pregunta</article>
-      <!--RESPUESTAS-->
-      <article id="respuesta">
-        <ul class="respuesta">
-          <li class="respuesta" id="correcta">Correcta</li>
-          <li class="respuesta" id="respuesta1">Respuesta1</li>
-          <li class="respuesta" id="respuesta2">Respuesta2</li>
-          <li class="respuesta" id="respuesta3">Respuesta3</li>
-          <li class="respuesta" id="respuesta4">Resouesta4</li>
-        </ul>
-      </article>
+      <article class="pregunta" id="pregunta"><h2>pregunta</h2></article>
+      <img alt="question-photo" src="https://picsum.photos/200/300" />
+      <!--el 200 y 300 son las dimensiones, luego cuando tengamos css borramos el  200 y 300 y ya redimensionamos
+      con el tamaño del contenenodr o como toque.-->
     </section>
+    <!--RESPUESTAS-->
+    <aside id="respuesta">
+      <ul class="respuesta">
+        <li class="respuesta" id="correcta">Correcta</li>
+        <li class="respuesta" id="respuesta1">Respuesta1</li>
+        <li class="respuesta" id="respuesta2">Respuesta2</li>
+        <li class="respuesta" id="respuesta3">Respuesta3</li>
+      </ul>
+    </aside>
     <!--NOTAS:
         Le he puesto class e id a todo para que luego se le pueda cambiar los estilos, en función
         de :hover o si tiene además el id correcta. Así como para darle apariencia de botón.
         El texto de as preguntas y respuestas, lo podemos cambiar luego en el javascript 
         mediante modificación del DOM, con .textconet para pasarle lo que recibamos del JSON.
+        Hay 5 respuestas en total en el JSON pero para que se adecúe al figma, podemos llamar a la correcta
+        y 3 respuestas haciendo un total de 4.
     
     -->
   </body>
