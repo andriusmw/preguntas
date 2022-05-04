@@ -23,11 +23,26 @@ function readText(ruta_local) {
 
 /***************************************************************************** */
 
-//Llamo a readtext para ver si lee el json.
+/***************************** FUNCIÓN ESCOGER PREGUNTA **************************************** */
+//variables globales
+let base_preguntas = readText("JSON.json");
+let interprete_bp = JSON.parse(base_preguntas);
+//leo el archivo json, lo pasero pasándoselo al interprete_bp
+
+var i = Math.round(Math.random() * 50);
+//genero número aleatorio entre 0 y 50 para pasárselo al
+//intérprete y que así poder llamar distintos objetos y acceder
+//a distintas preguntas y respuestas.
 
 function escogerPregunta() {
-  console.log(readText("JSON.json"));
+  console.log(
+    (document.getElementById("question").innerHTML = interprete_bp[i].question)
+  );
+  //Muestra por consola la pregunta y la escribe donde
+  //tiene el id question en el documento.
 }
 
 escogerPregunta();
-//Se lee todo el objeto del json, ahora podemos ir llamando por .pregunta , ,answer etc etc
+//SE LLAMA LA FUNCIÓN.
+
+/**************************************************************************************** */
