@@ -36,7 +36,8 @@ var i = Math.round(Math.random() * 50);
 
 function escogerPregunta() {
   console.log(
-    (document.getElementById("question").innerHTML = interprete_bp[i].question)
+    (document.getElementById("questionh2").innerHTML =
+      interprete_bp[i].question)
   );
   //Muestra por consola la pregunta y la escribe donde
   //tiene el id question en el documento.
