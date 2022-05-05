@@ -19,31 +19,33 @@ header {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 1em;
-/*   margin-right: 1em;
-  margin-left: 1em; */
   font-size: smaller;
+  background-color: #0E0F19;
 }
 
 header a {
   text-decoration: none;
-  color: white;
+  color: grey;
 }
 
 header h2 {
-  background-color: #0E0F19;
   color: white;
   padding: 6px;
   text-align: center;
-  border-radius: 8px;
   margin: 0 1em;
 }
 
 header h3 {
+  color: white;
+  padding: 6px;
+  text-align: center;
+}
+
+button {
   background-color: #0E0F19;
   color: white;
   padding: 6px;
   text-align: center;
-  border-radius: 8px;
 }
 
 .container {
@@ -61,7 +63,6 @@ header h3 {
   position: absolute;
   top: 0;
   left: 0;
-  /* padding: 16px; */
 
 }
 
@@ -84,7 +85,6 @@ header h3 {
   left: 55%;
   width: 35%;
   margin-left: 1.5em;
-/*   padding: 16px; */
   top: 50%;
   transform: translateY(-50%);
 }
