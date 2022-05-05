@@ -68,7 +68,10 @@ escogerPregunta();
 // CUANDO ES UNA RESPUESTA ERRÓNEA, LLAMA A LA FUNCIÓN SIGUIENTE PREGUNTA Y SUMA 1 AL CONTADOR
 // ERRORES
 
-let answer = document.querySelectorAll("li");
+const counter = 0
+const counterDisplay = document.getElementById("counter-display")
+const answer = document.querySelectorAll("li");
+// Necesitamos la constante global que acceda a la opción correcta en el JSON.
 
 // Hacer bucle que recorra el array de los li. Usar event delegation. Ejemplo de clase.
 for(let i of answer) {
@@ -76,7 +79,7 @@ for(let i of answer) {
   i.addEventListener("click", (event) => {
     // Conseguir lo que queríamos con la función.
     console.log(event.target.innerText)
-    if (event === correct) {
+    if (event.target.innerText === correct) {
       counter++;
       counterDisplay.innerText = `Score = ${counter} points`
       document.getElementById('correct').classList.add('win')
