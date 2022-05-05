@@ -84,3 +84,5 @@ escogerPregunta();
 //Crear con medios de modificación del DOM .createElement("li") --> algo en el DOM
 //poniendo "recarga la página o click en juego nuevo" indicando básicamente lo mismo
 //que el alert, pero para que se vea que hacemos uso también de lo que nos sugieren.
+
+// .addEventListener --->  contador clicks --> if (Clicks == 10) { Mostrar alert }
