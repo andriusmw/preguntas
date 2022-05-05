@@ -1,40 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  background-color: grey;
+  max-width: 100%;
+  margin: 0 1em;
 }
 
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 1em;
+  /*   margin-right: 1em;
+  margin-left: 1em; */
+  font-size: smaller;
 }
 
-#question {
-  max-width: 60vw;
-  display: flex;
-  flex-direction: column;
-  float: left;
-  text-align: center;
-  padding-top: 1em;
+header a {
+  text-decoration: none;
+  color: white;
 }
 
-#answer {
-  max-width: 40vw;
-  display: flex;
-  flex-direction: column;
+header h2 {
+  background-color: #0e0f19;
+  color: white;
+  padding: 6px;
   text-align: center;
-  padding-top: 3.5em;
+  border-radius: 8px;
   margin: 0 1em;
 }
 
-.answer li {
-  min-width: 39vw;
+header h3 {
+  background-color: #0e0f19;
+  color: white;
+  padding: 6px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 1em;
+  text-align: center;
+}
+
+#question-container {
+  height: 80%;
+  width: 55%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* padding: 16px; */
+}
+
+#question-container > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  border-radius: 14px;
+}
+
+#question-container > div h2 {
+  text-align: center;
+}
+
+#answer-container {
+  height: 80%;
+  position: absolute;
+  left: 55%;
+  width: 35%;
+  margin-left: 1.5em;
+  /*   padding: 16px; */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.answer-ul li {
   list-style-type: none;
   background-color: black;
   color: white;
   padding: 25px 0;
-  border: 2px solid red;
-  border-radius: 15px;
+  border-radius: 14px;
   margin-bottom: 1.5em;
+  text-align: center;
+}
+
+#correct {
+  background-color: #b56576;
+}
+
+#answer1 {
+  background-color: #eaac8b;
+}
+
+#answer2 {
+  background-color: #e56b6f;
+}
+
+#answer3 {
+  background-color: #dabfff;
 }

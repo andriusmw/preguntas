@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -42,6 +41,51 @@
 
 
   <!--NOTAS:
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions App by MontesinosR & AndriusMW</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h3>Score: 400 Points</h3>
+      <!-- Dummie text -->
+      <h2>
+        Questions App by
+        <a href="https://github.com/MontesinosR" target="_blank">MontesinosR</a>
+        & <a href="https://github.com/andriusmw" target="_blank">AndriusMW</a>
+      </h2>
+      <h3>New Game</h3>
+    </header>
+
+    <div class="container">
+      <!--PREGUNTA-->
+      <div id="question-container">
+        <div
+          style="background-image: url('https://source.unsplash.com/random')"
+        >
+          <h2 id="questionh2">Question Here</h2>
+        </div>
+      </div>
+
+      <!--RESPUESTAS-->
+      <div id="answer-container">
+        <aside>
+          <ul class="answer-ul">
+            <li class="answer" id="correct">Correct</li>
+            <li class="answer" id="answer1">answer1</li>
+            <li class="answer" id="answer2">answer2</li>
+            <li class="answer" id="answer3">answer3</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+
+    <!--NOTAS:
           Le he puesto class e id a todo para que luego se le pueda cambiar los estilos, en función
           de :hover o si tiene además el id correcta. Así como para darle apariencia de botón.
           El texto de as preguntas y respuestas, lo podemos cambiar luego en el javascript
@@ -50,6 +94,6 @@
           y 3 respuestas haciendo un total de 4.
 
       -->
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
