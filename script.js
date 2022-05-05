@@ -43,7 +43,7 @@ function escogerPregunta() {
   document.getElementById("answer1").innerHTML = interprete_bp[i].answers[0];
   document.getElementById("answer2").innerHTML = interprete_bp[i].answers[1];
   document.getElementById("answer3").innerHTML = interprete_bp[i].answers[2];
-  document.getElementById("correct").innerHTML = interprete_bp[i].correct;
+  document.getElementById("answer4").innerHTML = interprete_bp[i].answers[4];
 
   //Muestra por consola la pregunta y la escribe donde
   //tiene el id question en el documento.
@@ -62,11 +62,26 @@ escogerPregunta();
 
 /****************************** FUNCIÓN MARCADOR ************************************** */
 
-//Cuando clickamos en la respuesta correcta (correct) se le pone el fondo verde con una clase
+//Cuando clickamos en la respuesta correcta  se le pone el fondo verde con una clase
 // y sumamos +1 al div del contador.
 // .addEventListener("click")
 // CUANDO ES UNA RESPUESTA ERRÓNEA, LLAMA A LA FUNCIÓN SIGUIENTE PREGUNTA Y SUMA 1 AL CONTADOR
 // ERRORES
+
+let answers = document.querySelectorAll("li");
+//creamos bucle, recorrer array answers
+//for of
+/*en cada vuelta addeventlistener click
+
+/*
+    if (event.target == interprete_bp[i].correct) {
+        /*revisa como se pone event.target no estoy seguro
+        -->aquí ya hacemos cosas, sumamos +1, cambio clase, etc
+        
+    }
+
+
+*/
 
 /************************************************************************************* */
 
@@ -86,3 +101,14 @@ escogerPregunta();
 //que el alert, pero para que se vea que hacemos uso también de lo que nos sugieren.
 
 // .addEventListener --->  contador clicks --> if (Clicks == 10) { Mostrar alert }
+
+const ul = document.querySelector("ul");
+let clicks = 0;
+
+ul.addEventListener("click", () => {
+  clicks = clicks + 1;
+  console.log(clicks);
+  if (clicks == 10) {
+    alert("GAME OVER");
+  }
+});
