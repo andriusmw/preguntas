@@ -78,11 +78,11 @@ function winLose() {
     if (event === correct) {
       counter++;
       counterDisplay.innerText = `Score = ${counter} points`
-      document.getElementById('correct').classList.add('correct')
+      document.getElementById('correct').classList.add('win')
     } else {
       counter--;
       counterDisplay.innerText = `Score = ${counter} points`
-      answer.classList.add('false')
+      answer.classList.add('lose')
     }
   })
 }
