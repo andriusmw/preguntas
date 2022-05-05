@@ -68,16 +68,35 @@ escogerPregunta();
 // CUANDO ES UNA RESPUESTA ERRÓNEA, LLAMA A LA FUNCIÓN SIGUIENTE PREGUNTA Y SUMA 1 AL CONTADOR
 // ERRORES
 
-let answers = document.querySelectorAll("li");
+let answer = document.querySelectorAll("li");
+
+// Hacer bucle que recorra el array de los li. Usar event delegation. Ejemplo de clase.
+for(let i of answer) {
+  // Añadir un eventListener a cada li
+  i.addEventListener("click", (event) => {
+    // Conseguir lo que queríamos con la función.
+    console.log(event.target.innerText)
+    if (event === correct) {
+      counter++;
+      counterDisplay.innerText = `Score = ${counter} points`
+      document.getElementById('correct').classList.add('win')
+    } else {
+      counter--;
+      counterDisplay.innerText = `Score = ${counter} points`
+      answer.classList.add('lose')
+    }
+  })
+}
+
+
 //creamos bucle, recorrer array answers
 //for of
 /*en cada vuelta addeventlistener click
-
 /*
     if (event.target == interprete_bp[i].correct) {
         /*revisa como se pone event.target no estoy seguro
         -->aquí ya hacemos cosas, sumamos +1, cambio clase, etc
-        
+
     }
 
 
