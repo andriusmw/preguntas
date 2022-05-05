@@ -39,6 +39,11 @@ function escogerPregunta() {
     (document.getElementById("questionh2").innerHTML =
       interprete_bp[i].question)
   );
+  document.getElementById("answer1").innerHTML = interprete_bp[i].answers[0];
+  document.getElementById("answer2").innerHTML = interprete_bp[i].answers[1];
+  document.getElementById("answer3").innerHTML = interprete_bp[i].answers[2];
+  document.getElementById("correct").innerHTML = interprete_bp[i].correct;
+
   //Muestra por consola la pregunta y la escribe donde
   //tiene el id question en el documento.
 }
