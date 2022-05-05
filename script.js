@@ -68,12 +68,11 @@ escogerPregunta();
 // CUANDO ES UNA RESPUESTA ERRÓNEA, LLAMA A LA FUNCIÓN SIGUIENTE PREGUNTA Y SUMA 1 AL CONTADOR
 // ERRORES
 
-const counter = 0
+let counter = 0
 const counterDisplay = document.getElementById("counter-display")
-const answer = document.querySelectorAll("li");
+const answer = document.querySelectorAll("li")
+const correct = interprete_bp[i].correct
 const newGame = document.getElementById("new-game") // Funcionalidad del botón mañana cuando tengamos funcionando lo principal.
-
-// IMPORTANTE: Necesitamos la constante global que acceda a la opción correcta en el JSON.
 
 // Hacer bucle que recorra el array de los li. Usar event delegation. Ejemplo de clase.
 for(let i of answer) {
@@ -88,11 +87,12 @@ for(let i of answer) {
     } else {
       counter--;
       counterDisplay.innerText = `Score = ${counter} points`
-      answer.classList.add('lose')
+      answer[i].classList.add('lose') // Error not defined.
     }
   })
 }
 
+/* escogerPregunta() */
 
 //creamos bucle, recorrer array answers
 //for of
