@@ -113,3 +113,11 @@ button {
 #answer3 {
   background-color: #dabfff;
 }
+
+.win {
+  border: 2px solid green;
+}
+
+.lose {
+  border: 2px solid red;
+}

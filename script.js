@@ -68,6 +68,26 @@ escogerPregunta();
 // CUANDO ES UNA RESPUESTA ERRÓNEA, LLAMA A LA FUNCIÓN SIGUIENTE PREGUNTA Y SUMA 1 AL CONTADOR
 // ERRORES
 
+const counter = 0
+const counterDisplay =  document.getElementById('contador')
+const answer = document.getElementsByClassName('answer')
+const correct = document.getElementById('correct')
+
+function winLose() {
+  answer.addEventListener("click", (event) => {
+    if (event === correct) {
+      counter++;
+      counterDisplay.innerText = `Score = ${counter} points`
+      document.getElementById('correct').classList.add('win')
+    } else {
+      counter--;
+      counterDisplay.innerText = `Score = ${counter} points`
+      answer.classList.add('lose')
+    }
+  })
+}
+
+
 /************************************************************************************* */
 
 /********************************* FUNCIÓN SIGUIENTE PREGUNTA ************************* */
