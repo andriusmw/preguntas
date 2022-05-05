@@ -87,7 +87,7 @@ for(let i of answer) {
     } else {
       counter--;
       counterDisplay.innerText = `Score = ${counter} points`
-      answer[i].classList.add('lose') // Error not defined.
+      event.target.classList.add('lose')
     }
   })
 }
