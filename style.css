@@ -57,7 +57,7 @@ button {
   text-align: center;
 }
 
-#question-container {
+#question-container { /*Todos los ejemplos que encuentro para dar la opacidad a la imagen de fondo usan position absolute y relative. Intento de nuevo mañana.*/
   background-image: url('https://source.unsplash.com/random');
   background-repeat: no-repeat;
   background-size: cover;
@@ -74,6 +74,7 @@ button {
 #question-container h2 {
   text-align: center;
   margin: 0 1em;
+  color: white;
 }
 
 /****** las respuestas ******/
