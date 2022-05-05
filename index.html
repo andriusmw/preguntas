@@ -4,49 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Questions App by MontesinosR & andriusmw</title>
+    <title>Questions App by MontesinosR & AndriusMW</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <header>
-      <div>
-        <h3>Score</h3>
-      </div>
-      <div>
-        <h1>
-          Questions App by
-          <a href="https://github.com/MontesinosR" target="_blank"
-            >MontesinosR</a
-          >
-          & <a href="https://github.com/andriusmw" target="_blank">andriusmw</a>
-        </h1>
-      </div>
-      <div>
-        <h3>New Game</h3>
-      </div>
+      <h3>Score: 400 Points</h3>
+      <!-- Dummie text -->
+      <h2>
+        Questions App by
+        <a href="https://github.com/MontesinosR" target="_blank">MontesinosR</a>
+        & <a href="https://github.com/andriusmw" target="_blank">AndriusMW</a>
+      </h2>
+      <h3>New Game</h3>
     </header>
 
     <div class="container">
       <!--PREGUNTA-->
-      <section id="question">
-        <article class="question" id="question">
+      <div id="question-container">
+        <div
+          style="background-image: url('https://source.unsplash.com/random')"
+        >
           <h2 id="questionh2">Question Here</h2>
-        </article>
-        <img alt="question-photo" src="https://source.unsplash.com/random" />
-        <!--el 200 y 300 son las dimensiones, luego cuando tengamos css borramos el  200 y 300 y ya redimensionamos
-              con el tamaño del contenenodr o como toque.-->
-      </section>
+        </div>
+      </div>
 
       <!--RESPUESTAS-->
-      <aside id="answer">
-        <ul class="answer">
-          <li class="answer" id="correct">Correct</li>
-          <li class="answer" id="answer1">answer1</li>
-          <li class="answer" id="answer2">answer2</li>
-          <li class="answer" id="answer3">answer3</li>
-        </ul>
-      </aside>
+      <div id="answer-container">
+        <aside>
+          <ul class="answer-ul">
+            <li class="answer" id="correct">Correct</li>
+            <li class="answer" id="answer1">answer1</li>
+            <li class="answer" id="answer2">answer2</li>
+            <li class="answer" id="answer3">answer3</li>
+          </ul>
+        </aside>
+      </div>
     </div>
 
     <!--NOTAS:
