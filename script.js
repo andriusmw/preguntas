@@ -71,6 +71,7 @@ escogerPregunta();
 const counter = 0
 const counterDisplay = document.getElementById("counter-display")
 const answer = document.querySelectorAll("li");
+const newGame = document.getElementById("new-game")
 // Necesitamos la constante global que acceda a la opción correcta en el JSON.
 
 // Hacer bucle que recorra el array de los li. Usar event delegation. Ejemplo de clase.
