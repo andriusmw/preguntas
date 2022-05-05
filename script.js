@@ -70,11 +70,14 @@ escogerPregunta();
 
 const counter = 0
 const counterDisplay =  document.getElementById('contador')
-const answer = document.querySelectorAll('li') // ¿Cómo conseguir que recoja el li que clickamos?
+const answer = document.querySelector('li')
 const correct = document.getElementById('correct')
 
-function winLose() {
-  answer.addEventListener("click", (event) => {
+// Hacer bucle que recorra el array de los li. Usar event delegation. Ejemplo de clase.
+for(let i of answer) {
+  // Añadir un eventListener a cada li
+  i.addEventListener("click", (event) => {
+    // Conseguir lo que queríamos con la función.
     if (event === correct) {
       counter++;
       counterDisplay.innerText = `Score = ${counter} points`
@@ -85,11 +88,26 @@ function winLose() {
       answer.classList.add('lose')
     }
   })
+}
+
+
+
+/* function winLose() {
+  answer.addEventListener("click", (event) => {
+    if (event === correct) { Si el textContent del li seleccionado es correcto. Correct debe ser una variable global que recoja el texto de la respuesta correcta de JSON.
+      counter++;
+      counterDisplay.innerText = `Score = ${counter} points`
+      document.getElementById('correct').classList.add('win')
+    } else {
+      counter--;
+      counterDisplay.innerText = `Score = ${counter} points`
+      answer.classList.add('lose')
+    }
+  }) */
 
   setTimeout(() => { // Una vez elegida la respuesta, espera dos segundos y pasa a la siguiente pregunta.
 
   }, timeout);
-}
 
 
 /************************************************************************************* */
