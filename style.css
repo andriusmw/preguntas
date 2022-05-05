@@ -51,7 +51,7 @@ button {
 .container {
   position: relative;
   overflow: hidden;
-  width: 100vw;
+  width: 90vw;
   height: 100vh;
   margin-top: 1em;
   text-align: center;
@@ -78,6 +78,7 @@ button {
   text-align: center;
 }
 
+/****** las respuestas ******/
 #answer-container {
   height: 80%;
   position: absolute;
@@ -112,4 +113,100 @@ button {
 
 #answer3 {
   background-color: #dabfff;
+}
+
+/**************** MEDIA QUERY *****************************************/
+
+@media only screen and (max-width: 600px) {
+  #answer-container {
+    /* height: 80%; */
+    position: relative;
+    left: 22%;
+    margin-top: 40%;
+    /* width: 35%; */
+    margin-left: 1.5em;
+    /* top: 50%; */
+    /* float: left; */
+    transform: translateY(-50%);
+  }
+
+  #question-container {
+    height: 40%;
+    width: 55%;
+    position: absolute;
+    top: 0;
+    left: 18%;
+  }
+}
+
+/**** móviles con 480px  */
+
+@media only screen and (max-width: 480px) {
+  #answer-container {
+    /* height: 80%; */
+    position: relative;
+    left: 22%;
+    margin-top: 50%;
+    /* width: 35%; */
+    margin-left: 1.5em;
+    /* top: 50%; */
+    /* float: left; */
+    transform: translateY(-50%);
+  }
+
+  #question-container {
+    height: 40%;
+    width: 55%;
+    position: absolute;
+    top: 0;
+    left: 18%;
+  }
+}
+
+/**** móviles con 380px  */
+
+@media only screen and (max-width: 380px) {
+  #answer-container {
+    /* height: 80%; */
+    position: relative;
+    left: 22%;
+    margin-top: 60%;
+    /* width: 35%; */
+    margin-left: 1.5em;
+    /* top: 50%; */
+    /* float: left; */
+    transform: translateY(-50%);
+  }
+
+  #question-container {
+    height: 40%;
+    width: 55%;
+    position: absolute;
+    top: 0;
+    left: 18%;
+  }
+}
+
+/**** móviles con 280px  */
+
+@media only screen and (max-width: 280px) {
+  #answer-container {
+    /* height: 80%; */
+    position: relative;
+    left: 22%;
+    margin-top: 70%;
+    /* width: 35%; */
+    margin-left: 1.5em;
+    /* top: 50%; */
+    /* float: left; */
+    transform: translateY(-50%);
+  }
+
+  #question-container {
+    height: 40%;
+    width: 55%;
+    position: absolute;
+    top: 0;
+    left: 18%;
+  }
 }
