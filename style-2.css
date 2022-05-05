@@ -10,6 +10,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   height: 100vh;
   background-color: grey;
+  max-width: 100%;
+  margin: 0 1em;
 }
 
 header {
@@ -17,8 +19,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 1em;
-  margin-right: 1em;
-  margin-left: 1em;
+/*   margin-right: 1em;
+  margin-left: 1em; */
   font-size: smaller;
 }
 
@@ -49,6 +51,8 @@ header h3 {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+  margin-top: 1em;
+  text-align: center;
 }
 
 #question-container {
@@ -57,7 +61,8 @@ header h3 {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 16px;
+  /* padding: 16px; */
+
 }
 
 #question-container>div {
@@ -76,10 +81,10 @@ header h3 {
 #answer-container {
   height: 80%;
   position: absolute;
-  top: 0;
   left: 55%;
-  width: 43%;
-  padding: 16px;
+  width: 35%;
+  margin-left: 1.5em;
+/*   padding: 16px; */
   top: 50%;
   transform: translateY(-50%);
 }
