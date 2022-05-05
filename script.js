@@ -59,3 +59,28 @@ escogerPregunta();
 //SE LLAMA LA FUNCIÓN.
 
 /**************************************************************************************** */
+
+/****************************** FUNCIÓN MARCADOR ************************************** */
+
+//Cuando clickamos en la respuesta correcta (correct) se le pone el fondo verde con una clase
+// y sumamos +1 al div del contador.
+// .addEventListener("click")
+// CUANDO ES UNA RESPUESTA ERRÓNEA, LLAMA A LA FUNCIÓN SIGUIENTE PREGUNTA Y SUMA 1 AL CONTADOR
+// ERRORES
+
+/************************************************************************************* */
+
+/********************************* FUNCIÓN SIGUIENTE PREGUNTA ************************* */
+
+//Un botón que cuando se hace click llame a esocgerPregunta()
+//mirar que NO recargue la página.
+//
+
+/***************************************************************************************** */
+
+/************************************* GAME OVER ************************************* */
+
+//Cuando hayamos clickado 10 preguntas, que aparezca un aleRt diciendo game over.
+//Crear con medios de modificación del DOM .createElement("li") --> algo en el DOM
+//poniendo "recarga la página o click en juego nuevo" indicando básicamente lo mismo
+//que el alert, pero para que se vea que hacemos uso también de lo que nos sugieren.
