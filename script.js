@@ -70,7 +70,7 @@ escogerPregunta();
 
 const counter = 0
 const counterDisplay =  document.getElementById('contador')
-const answer = document.getElementsByClassName('answer')
+const answer = document.querySelectorAll('li') // ¿Cómo conseguir que recoja el li que clickamos?
 const correct = document.getElementById('correct')
 
 function winLose() {
@@ -85,6 +85,10 @@ function winLose() {
       answer.classList.add('lose')
     }
   })
+
+  setTimeout(() => { // Una vez elegida la respuesta, espera dos segundos y pasa a la siguiente pregunta.
+
+  }, timeout);
 }
 
 
