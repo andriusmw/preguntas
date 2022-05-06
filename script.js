@@ -95,7 +95,7 @@ for (let x of answer) {
       }, 500);
       intervalID();
     } else {
-      counter--;
+      //counter--;
       counterDisplay.innerText = `Score = ${counter} points`;
       event.target.classList.add("lose");
 
@@ -159,11 +159,40 @@ function siguientePregunta() {
 
 const ul = document.querySelector("ul");
 let clicks = 0;
-
+/*
 ul.addEventListener("click", () => {
   clicks = clicks + 1;
   console.log(clicks);
-  if (clicks == 10) {
+  if (clicks == 11) {
     alert("GAME OVER");
   }
+});*/
+
+ul.addEventListener("click", (event) => {
+  if (event.target !== event.currentTarget) {
+    clicks = clicks + 1;
+    if (clicks == 11) {
+      alert("GAME OVER" + " Puntuación: " + counter);
+      //location.reload();
+      //createelement div con la puntuacion y refresh
+
+      let li = document.createElement("li");
+      ul.appendChild(li);
+      li.innerText =
+        `GAME OVER, has acertado ${counter}/10 preguntas ` +
+        counter +
+        " haz click en new game para continuar";
+      li.className += "NombreClase";
+    }
+  }
+  console.log(clicks);
 });
+
+/**************************** JUEGO NUEVO ******************************** */
+
+//ref linea 76
+newGame.addEventListener("click", () => {
+  location.reload();
+});
+
+/******************************************************************** */
