@@ -30,8 +30,8 @@ let interprete_bp = JSON.parse(base_preguntas);
 //leo el archivo json, lo pasero pasándoselo al interprete_bp
 
 var longitudArray = 50;
-var i = Math.round(Math.random() * longitudArray);
-var correct2 = ''
+let i = Math.round(Math.random() * longitudArray);
+var correct2 = "";
 //genero número aleatorio entre 0 y 50 para pasárselo al
 //intérprete y que así poder llamar distintos objetos y acceder
 //a distintas preguntas y respuestas.
@@ -45,8 +45,8 @@ function escogerPregunta() {
   document.getElementById("answer2").innerHTML = interprete_bp[i].answers[1];
   document.getElementById("answer3").innerHTML = interprete_bp[i].answers[2];
   document.getElementById("answer4").innerHTML = interprete_bp[i].answers[3];
-  let correct = interprete_bp[i].correct
-  correct2 = correct
+  let correct = interprete_bp[i].correct;
+  correct2 = correct;
   //Muestra por consola la pregunta y la escribe donde
   //tiene el id question en el documento.
 
@@ -70,30 +70,44 @@ escogerPregunta();
 // CUANDO ES UNA RESPUESTA ERRÓNEA, LLAMA A LA FUNCIÓN SIGUIENTE PREGUNTA Y SUMA 1 AL CONTADOR
 // ERRORES
 
-let counter = 0
-const counterDisplay = document.getElementById("counter-display")
-const answer = document.querySelectorAll("li")
-const newGame = document.getElementById("new-game") // Funcionalidad del botón mañana cuando tengamos funcionando lo principal.
+let counter = 0;
+const counterDisplay = document.getElementById("counter-display");
+const answer = document.querySelectorAll("li");
+const newGame = document.getElementById("new-game"); // Funcionalidad del botón mañana cuando tengamos funcionando lo principal.
 
 // Hacer bucle que recorra el array de los li. Usar event delegation. Ejemplo de clase.
-for(let x of answer) {
+for (let x of answer) {
   // Añadir un eventListener a cada li
   x.addEventListener("click", (event) => {
     // Conseguir lo que queríamos con la función.
-    console.log(event.target.innerText)
-    console.log(correct2)
+    console.log(event.target.innerText);
+    console.log(correct2);
     if (event.target.innerText === correct2) {
       counter++;
-      counterDisplay.innerText = `Score = ${counter} points`
-      event.target.classList.add('win')
-      escogerPregunta()
+      counterDisplay.innerText = `Score = ${counter} points`;
+      event.target.classList.add("win");
+
+      //intervalo
+      const intervalID = setInterval(() => {
+        event.target.classList.remove("win");
+        siguientePregunta();
+        clearInterval(intervalID);
+      }, 500);
+      intervalID();
     } else {
       counter--;
-      counterDisplay.innerText = `Score = ${counter} points`
-      event.target.classList.add('lose')
-      escogerPregunta()
+      counterDisplay.innerText = `Score = ${counter} points`;
+      event.target.classList.add("lose");
+
+      //intervalo
+      const intervalID = setInterval(() => {
+        event.target.classList.remove("lose");
+        siguientePregunta();
+        clearInterval(intervalID);
+      }, 500);
+      intervalID();
     }
-  })
+  });
 }
 
 /*  */
@@ -117,7 +131,13 @@ for(let x of answer) {
 
 //Un botón que cuando se hace click llame a esocgerPregunta()
 //mirar que NO recargue la página.
-//
+
+function siguientePregunta() {
+  var numrandom = Math.round(Math.random() * longitudArray);
+  i = numrandom;
+
+  escogerPregunta();
+}
 
 /***************************************************************************************** */
 
@@ -129,3 +149,21 @@ for(let x of answer) {
 //que el alert, pero para que se vea que hacemos uso también de lo que nos sugieren.
 
 // .addEventListener --->  contador clicks --> if (Clicks == 10) { Mostrar alert }
+
+//Cuando hayamos clickado 10 preguntas, que aparezca un aleRt diciendo game over.
+//Crear con medios de modificación del DOM .createElement("li") --> algo en el DOM
+//poniendo "recarga la página o click en juego nuevo" indicando básicamente lo mismo
+//que el alert, pero para que se vea que hacemos uso también de lo que nos sugieren.
+
+// .addEventListener --->  contador clicks --> if (Clicks == 10) { Mostrar alert }
+
+const ul = document.querySelector("ul");
+let clicks = 0;
+
+ul.addEventListener("click", () => {
+  clicks = clicks + 1;
+  console.log(clicks);
+  if (clicks == 10) {
+    alert("GAME OVER");
+  }
+});
