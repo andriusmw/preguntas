@@ -10,42 +10,37 @@
 
   <body>
     <header>
-      <h2>
+      <h3>
         Questions App by
         <a href="https://github.com/MontesinosR" target="_blank">MontesinosR</a>
         & <a href="https://github.com/andriusmw" target="_blank">andriusmw</a>
-      </h2>
-      <h3>Score: 400 Points</h3>
-      <!-- Dummie text -->
-      <button>New Game</button>
+      </h3>
+      <h3 id="counter-display"></h3>
+      <h3 id="new-game">New Game</h3>
     </header>
 
-    <div class="container">
+    <main class="container">
       <!--PREGUNTA-->
       <div id="question-container">
-        <div
-          style="background-image: url('https://source.unsplash.com/random')"
-        >
-          <h2 id="questionh2">Question Here</h2>
-        </div>
+        <h2 id="questionh2">Question Here</h2>
       </div>
 
       <!--RESPUESTAS-->
       <div id="answer-container">
         <aside>
           <ul class="answer-ul">
-            <li class="answer" id="correct">Correct</li>
             <li class="answer" id="answer1">answer1</li>
             <li class="answer" id="answer2">answer2</li>
             <li class="answer" id="answer3">answer3</li>
+            <li class="answer" id="answer4">answer4</li>
           </ul>
         </aside>
       </div>
-    </div>
+    </main>
 
     <!--NOTAS:
 =======
-  
+
           Le he puesto class e id a todo para que luego se le pueda cambiar los estilos, en función
           de :hover o si tiene además el id correcta. Así como para darle apariencia de botón.
           El texto de as preguntas y respuestas, lo podemos cambiar luego en el javascript
