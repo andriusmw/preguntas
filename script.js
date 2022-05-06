@@ -31,6 +31,7 @@ let interprete_bp = JSON.parse(base_preguntas);
 
 var longitudArray = 50;
 var i = Math.round(Math.random() * longitudArray);
+var correct2 = ''
 //genero número aleatorio entre 0 y 50 para pasárselo al
 //intérprete y que así poder llamar distintos objetos y acceder
 //a distintas preguntas y respuestas.
@@ -43,8 +44,9 @@ function escogerPregunta() {
   document.getElementById("answer1").innerHTML = interprete_bp[i].answers[0];
   document.getElementById("answer2").innerHTML = interprete_bp[i].answers[1];
   document.getElementById("answer3").innerHTML = interprete_bp[i].answers[2];
-  document.getElementById("answer4").innerHTML = interprete_bp[i].answers[4];
-
+  document.getElementById("answer4").innerHTML = interprete_bp[i].answers[3];
+  let correct = interprete_bp[i].correct
+  correct2 = correct
   //Muestra por consola la pregunta y la escribe donde
   //tiene el id question en el documento.
 
@@ -68,16 +70,42 @@ escogerPregunta();
 // CUANDO ES UNA RESPUESTA ERRÓNEA, LLAMA A LA FUNCIÓN SIGUIENTE PREGUNTA Y SUMA 1 AL CONTADOR
 // ERRORES
 
-let answers = document.querySelectorAll("li");
+let counter = 0
+const counterDisplay = document.getElementById("counter-display")
+const answer = document.querySelectorAll("li")
+const newGame = document.getElementById("new-game") // Funcionalidad del botón mañana cuando tengamos funcionando lo principal.
+
+// Hacer bucle que recorra el array de los li. Usar event delegation. Ejemplo de clase.
+for(let x of answer) {
+  // Añadir un eventListener a cada li
+  x.addEventListener("click", (event) => {
+    // Conseguir lo que queríamos con la función.
+    console.log(event.target.innerText)
+    console.log(correct2)
+    if (event.target.innerText === correct2) {
+      counter++;
+      counterDisplay.innerText = `Score = ${counter} points`
+      event.target.classList.add('win')
+      escogerPregunta()
+    } else {
+      counter--;
+      counterDisplay.innerText = `Score = ${counter} points`
+      event.target.classList.add('lose')
+      escogerPregunta()
+    }
+  })
+}
+
+/*  */
+
 //creamos bucle, recorrer array answers
 //for of
 /*en cada vuelta addeventlistener click
-
 /*
     if (event.target == interprete_bp[i].correct) {
         /*revisa como se pone event.target no estoy seguro
         -->aquí ya hacemos cosas, sumamos +1, cambio clase, etc
-        
+
     }
 
 

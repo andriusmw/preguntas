@@ -49,51 +49,48 @@ button {
 }
 
 .container {
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  height: 100vh;
+  height: 80%;
   margin-top: 1em;
   text-align: center;
 }
 
-#question-container {
-  height: 80%;
-  width: 55%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#question-container > div {
+#question-container { /*Todos los ejemplos que encuentro para dar la opacidad a la imagen de fondo usan position absolute y relative. Intento de nuevo mañana.*/
+  background-image: url('https://source.unsplash.com/random');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  display: flex;
+  align-items: center;
   height: 100%;
-  width: 100%;
+  width: 55%;
+  top: 0;
+  left: 0;
   border-radius: 14px;
 }
 
-#question-container > div h2 {
+#question-container h2 {
   text-align: center;
+  margin: 0 1em;
+  color: white;
 }
 
 /****** las respuestas ******/
 #answer-container {
-  height: 80%;
-  position: absolute;
-  left: 55%;
-  width: 35%;
-  margin-left: 1.5em;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto auto;
 }
 
 .answer-ul li {
   list-style-type: none;
   background-color: black;
   color: white;
-  padding: 25px 0;
+  padding: 25px 35px;
   border-radius: 14px;
   margin-bottom: 1.5em;
   text-align: center;
@@ -113,6 +110,14 @@ button {
 
 #answer3 {
   background-color: #dabfff;
+}
+
+.win {
+  border: 2px solid green;
+}
+
+.lose {
+  border: 2px solid red;
 }
 
 /**************** MEDIA QUERY *****************************************/
