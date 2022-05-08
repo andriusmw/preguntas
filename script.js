@@ -97,6 +97,8 @@ for (let x of answer) {
     } else {
       /* counter--; */
       counterDisplay.innerText = `Score: ${counter} points`;
+      //counter--;
+      counterDisplay.innerText = `Score = ${counter} points`;
       event.target.classList.add("lose");
 
       //intervalo
@@ -173,7 +175,7 @@ ul.addEventListener("click", (event) => {
     clicks = clicks + 1;
     if (clicks == 11) {
 /*       alert("GAME OVER" + " Puntuación: " + counter);
- */      //location.reload();
+ */      //location.reload()
       //createelement div con la puntuacion y refresh
 
       let li = document.createElement("li");
