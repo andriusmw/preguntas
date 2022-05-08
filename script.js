@@ -179,10 +179,10 @@ ul.addEventListener("click", (event) => {
       let li = document.createElement("li");
       ul.appendChild(li);
       li.innerText =
-        `GAME OVER, has acertado ${counter}/10 preguntas ` +
-        counter +
-        " haz click en new game para continuar";
-      li.className += "NombreClase";
+        `GAME OVER.
+        Has acertado ${counter}/10 preguntas.
+        Haz click en New Game para continuar.`;
+      li.className = "gameover";
     }
   }
   console.log(clicks);
