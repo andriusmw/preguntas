@@ -84,7 +84,7 @@ for (let x of answer) {
     console.log(correct2);
     if (event.target.innerText === correct2) {
       counter++;
-      counterDisplay.innerText = `Score = ${counter} points`;
+      counterDisplay.innerText = `Score: ${counter} points`;
       event.target.classList.add("win");
 
       //intervalo
@@ -95,6 +95,8 @@ for (let x of answer) {
       }, 500);
       intervalID();
     } else {
+      /* counter--; */
+      counterDisplay.innerText = `Score: ${counter} points`;
       //counter--;
       counterDisplay.innerText = `Score = ${counter} points`;
       event.target.classList.add("lose");
@@ -172,17 +174,17 @@ ul.addEventListener("click", (event) => {
   if (event.target !== event.currentTarget) {
     clicks = clicks + 1;
     if (clicks == 11) {
-      alert("GAME OVER" + " Puntuación: " + counter);
-      //location.reload();
+/*       alert("GAME OVER" + " Puntuación: " + counter);
+ */      //location.reload()
       //createelement div con la puntuacion y refresh
 
       let li = document.createElement("li");
       ul.appendChild(li);
       li.innerText =
-        "GAME OVER, tu puntiación es: " +
-        counter +
-        " haz click en new game para continuar";
-      li.className += "NombreClase";
+        `GAME OVER.
+        Has acertado ${counter}/10 preguntas.
+        Haz click en New Game para continuar.`;
+      li.className = "gameover";
     }
   }
   console.log(clicks);
