@@ -84,7 +84,7 @@ for (let x of answer) {
     console.log(correct2);
     if (event.target.innerText === correct2) {
       counter++;
-      counterDisplay.innerText = `Score = ${counter} points`;
+      counterDisplay.innerText = `Score: ${counter} points`;
       event.target.classList.add("win");
 
       //intervalo
@@ -95,8 +95,8 @@ for (let x of answer) {
       }, 500);
       intervalID();
     } else {
-      //counter--;
-      counterDisplay.innerText = `Score = ${counter} points`;
+      /* counter--; */
+      counterDisplay.innerText = `Score: ${counter} points`;
       event.target.classList.add("lose");
 
       //intervalo
@@ -172,8 +172,8 @@ ul.addEventListener("click", (event) => {
   if (event.target !== event.currentTarget) {
     clicks = clicks + 1;
     if (clicks == 11) {
-      alert("GAME OVER" + " Puntuación: " + counter);
-      //location.reload();
+/*       alert("GAME OVER" + " Puntuación: " + counter);
+ */      //location.reload();
       //createelement div con la puntuacion y refresh
 
       let li = document.createElement("li");
