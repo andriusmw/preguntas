@@ -1,5 +1,7 @@
 "use strict";
 
+/******************** FUNCIÓN PARA LEER EL JSON *********************************/
+
 function readText(ruta_local) {
   var texto = null;
   var xmlhttp = new XMLHttpRequest();
@@ -11,6 +13,8 @@ function readText(ruta_local) {
   return texto;
 }
 
+/***************************** FUNCIÓN ESCOGER PREGUNTA **************************************** */
+
 let base_preguntas = readText("JSON.json");
 let interprete_bp = JSON.parse(base_preguntas);
 
@@ -19,6 +23,11 @@ let i = Math.round(Math.random() * longitudArray);
 var correct2 = "";
 
 function escogerPregunta() {
+
+  console.log(
+    (document.getElementById("questionh2").innerHTML =
+      interprete_bp[i].question)
+  );
 
   document.getElementById("answer1").innerHTML = interprete_bp[i].answers[0];
   document.getElementById("answer2").innerHTML = interprete_bp[i].answers[1];
@@ -33,6 +42,9 @@ function escogerPregunta() {
 
 
 escogerPregunta();
+
+
+/****************************** FUNCIÓN MARCADOR ************************************** */
 
 
 let counter = 0;
@@ -68,12 +80,18 @@ for (let x of answer) {
 }
 
 
+/********************************* FUNCIÓN SIGUIENTE PREGUNTA ************************* */
+
+
 function siguientePregunta() {
   var numrandom = Math.round(Math.random() * longitudArray);
   i = numrandom;
 
   escogerPregunta();
 }
+
+
+/************************************* GAME OVER ************************************* */
 
 
 const ul = document.querySelector("ul");
@@ -94,6 +112,9 @@ ul.addEventListener("click", (event) => {
     }
   }
 });
+
+
+/**************************** JUEGO NUEVO ******************************** */
 
 
 newGame.addEventListener("click", () => {
