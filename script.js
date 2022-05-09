@@ -23,9 +23,8 @@ let i = Math.round(Math.random() * longitudArray);
 var correct2 = "";
 
 function escogerPregunta() {
-
   console.log(
-    (document.getElementById("questionh2").textContent =
+    (document.getElementById("questionh2").innerHTML =
       interprete_bp[i].question)
   );
 
@@ -40,12 +39,9 @@ function escogerPregunta() {
   longitudArray = longitudArray - 1;
 }
 
-
 escogerPregunta();
 
-
 /****************************** FUNCIÓN MARCADOR ************************************** */
-
 
 let counter = 0;
 const counterDisplay = document.getElementById("counter-display");
@@ -53,9 +49,7 @@ const answer = document.querySelectorAll("li");
 const newGame = document.getElementById("new-game");
 
 for (let x of answer) {
-
   x.addEventListener("click", (event) => {
-
     if (event.target.textContent === correct2) {
       counter++;
       counterDisplay.textContent = `Score: ${counter} points`;
@@ -65,7 +59,6 @@ for (let x of answer) {
         event.target.classList.remove("win");
         siguientePregunta();
       }, 500);
-
     } else {
       counterDisplay.textContent = `Score: ${counter} points`;
       event.target.classList.add("lose");
@@ -75,13 +68,10 @@ for (let x of answer) {
         siguientePregunta();
       }, 500);
     }
-
   });
 }
 
-
 /********************************* FUNCIÓN SIGUIENTE PREGUNTA ************************* */
-
 
 function siguientePregunta() {
   var numrandom = Math.round(Math.random() * longitudArray);
@@ -90,13 +80,10 @@ function siguientePregunta() {
   escogerPregunta();
 }
 
-
 /************************************* GAME OVER ************************************* */
-
 
 const ul = document.querySelector("ul");
 let clicks = 0;
-
 
 ul.addEventListener("click", (event) => {
   if (event.target !== event.currentTarget) {
@@ -104,8 +91,7 @@ ul.addEventListener("click", (event) => {
     if (clicks == 11) {
       let li = document.createElement("li");
       ul.appendChild(li);
-      li.textContent =
-        `GAME OVER.
+      li.textContent = `GAME OVER.
         Has acertado ${counter}/10 preguntas.
         Haz click en New Game para continuar.`;
       li.className = "gameover";
@@ -113,9 +99,7 @@ ul.addEventListener("click", (event) => {
   }
 });
 
-
 /**************************** JUEGO NUEVO ******************************** */
-
 
 newGame.addEventListener("click", () => {
   location.reload();

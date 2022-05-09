@@ -58,7 +58,7 @@ button {
 }
 
 #question-container {
-  background-image: url('https://source.unsplash.com/random');
+  background-image: url("https://source.unsplash.com/random");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -113,7 +113,7 @@ button {
 }
 
 #answer4 {
-  background-color: #B56576;
+  background-color: #b56576;
 }
 
 .win {
@@ -180,6 +180,10 @@ button {
 
 /************400px ****/
 @media only screen and (max-width: 450px) {
+  h2 {
+    font-size: 80%;
+  }
+
   #answer-container {
     height: 80%;
     position: relative;
