@@ -94,6 +94,7 @@ button {
   border-radius: 14px;
   margin-bottom: 1.5em;
   text-align: center;
+  cursor: pointer;
 }
 
 #correct {
@@ -118,6 +119,15 @@ button {
 
 .lose {
   border: 2px solid red;
+}
+
+.gameover {
+  font-size: x-large;
+  position: absolute;
+  padding: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /**************** MEDIA QUERY *****************************************/
