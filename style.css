@@ -112,6 +112,10 @@ button {
   background-color: #dabfff;
 }
 
+#answer4 {
+  background-color: #B56576;
+}
+
 .win {
   border: 2px solid green;
 }

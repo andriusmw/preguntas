@@ -25,7 +25,7 @@ var correct2 = "";
 function escogerPregunta() {
 
   console.log(
-    (document.getElementById("questionh2").innerHTML =
+    (document.getElementById("questionh2").textContent =
       interprete_bp[i].question)
   );
 
